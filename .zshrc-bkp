@@ -1,0 +1,30 @@
+#!/usr/bin/env zsh
+setopt autocd
+
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# NVM related exports
+export NVM_DIR="$HOME/.nvm"
+
+# source NVM to Path
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# export JAVA_HOME="/opt/homebrew/Cellar/openjdk@11/11.0.21/libexec/openjdk.jdk/Contents/Home"
+export MAVEN_BIN="/opt/apache-maven-3.8.6/bin"
+export NVIM_BIN="/opt/nvim-macos/bin"
+export SUBL_PATH="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin"
+export PSQL_PATH="/opt/homebrew/Cellar/postgresql@17/17.5/bin"
+export PATH=/opt/homebrew/bin:/opt/homebrew/Cellar/openvpn/2.6.12/sbin:$MAVEN_BIN:$HOME/.npm-global/bin:$NVIM_BIN:/opt/homebrew/opt/php@8.2/bin:/opt/homebrew/opt/php@8.2/sbin:$HOME/bin:/usr/local/bin:/opt/homebrew/opt/mysql@8.4/bin:$SUBL_PATH:$PSQL_PATH:$PATH
+export CLICOLOR=1
+
+# version aliases
+alias java-17="export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version"
+alias java-11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+alias java-21="export JAVA_HOME=`/usr/libexec/java_home -v 21`; java -version"
+alias node12="nvm use 12"
+alias node14="nvm use 14"
+alias node16="nvm use 16"
+alias node-lts="nvm use lts"
+

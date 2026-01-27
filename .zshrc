@@ -35,6 +35,7 @@ alias delete_dock_delay="defaults write com.apple.Dock autohide-delay -float 0 &
 alias restore_dock_delay="defaults delete com.apple.Dock autohide-delay && killall Dock"
 alias larth="ls -larth"
 alias lrth="ls -lrth"
+alias ll="ls -la"
 alias ffmpeg="/opt/local/bin/ffmpeg"
 alias cb="git rev-parse --abbrev-ref HEAD"
 alias vim="nvim"
